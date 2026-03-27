@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ostatnie Słowa — Godne pożegnanie dla Twojego bliskiego</title>
-  <meta name="description" content="Spersonalizowany pakiet dokumentów pogrzebowych — nekrolog, mowa, klepsydra, plan żałoby. Napisane z troską. Gotowe w 24 godziny." />
+  <meta name="description" content="Nie musisz teraz szukać słów. Wypełniasz formularz o swoim bliskim — my piszemy nekrolog, mowę pogrzebową i tekst na klepsydrę. Gotowe w 24 godziny." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -23,7 +23,6 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -34,7 +33,7 @@
       overflow-x: hidden;
     }
 
-    /* ─── NAV ─── */
+    /* NAV */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -68,12 +67,12 @@
       background: var(--gold);
       padding: 0.55rem 1.4rem;
       text-decoration: none;
-      transition: background 0.2s, color 0.2s;
+      transition: background 0.2s;
     }
 
     .nav-cta:hover { background: var(--gold-light); }
 
-    /* ─── HERO ─── */
+    /* HERO */
     .hero {
       min-height: 100vh;
       background: var(--forest);
@@ -135,9 +134,9 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(2.8rem, 6vw, 5rem);
       font-weight: 300;
-      line-height: 1.12;
+      line-height: 1.15;
       color: var(--cream);
-      margin-bottom: 1.8rem;
+      margin-bottom: 2rem;
       opacity: 0;
       animation: fadeUp 0.8s ease 0.4s forwards;
     }
@@ -148,11 +147,11 @@
     }
 
     .hero-subtitle {
-      font-size: 1.05rem;
+      font-size: 1.08rem;
       font-weight: 300;
-      line-height: 1.75;
-      color: rgba(245, 240, 232, 0.72);
-      max-width: 560px;
+      line-height: 1.85;
+      color: rgba(245, 240, 232, 0.75);
+      max-width: 580px;
       margin: 0 auto 2.8rem;
       opacity: 0;
       animation: fadeUp 0.8s ease 0.6s forwards;
@@ -197,7 +196,7 @@
       padding: 1rem 2.4rem;
       text-decoration: none;
       display: inline-block;
-      transition: border-color 0.2s, background 0.2s;
+      transition: border-color 0.2s, color 0.2s;
     }
 
     .btn-ghost:hover {
@@ -208,26 +207,14 @@
     .hero-note {
       margin-top: 2rem;
       font-size: 0.78rem;
-      color: rgba(245, 240, 232, 0.4);
+      color: rgba(245, 240, 232, 0.38);
       letter-spacing: 0.05em;
       opacity: 0;
       animation: fadeUp 0.8s ease 1s forwards;
     }
 
-    /* ─── DIVIDER ─── */
-    .divider {
-      text-align: center;
-      padding: 3rem 0 1rem;
-      color: var(--gold);
-      font-size: 1.2rem;
-      letter-spacing: 0.5em;
-      opacity: 0.5;
-    }
-
-    /* ─── SECTION BASE ─── */
-    section {
-      padding: 6rem 2rem;
-    }
+    /* SECTIONS */
+    section { padding: 6rem 2rem; }
 
     .container {
       max-width: 1020px;
@@ -249,7 +236,7 @@
       font-weight: 400;
       line-height: 1.2;
       color: var(--forest);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.2rem;
     }
 
     .section-title em {
@@ -257,21 +244,16 @@
       color: var(--forest-light);
     }
 
-    /* ─── CO OTRZYMUJESZ ─── */
-    .what {
-      background: var(--cream);
-    }
-
-    .what-intro {
-      max-width: 560px;
+    .section-lead {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: #4a5a50;
+      max-width: 580px;
       margin-bottom: 4rem;
     }
 
-    .what-intro p {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: #4a5a50;
-    }
+    /* CO OTRZYMUJESZ */
+    .what { background: var(--cream); }
 
     .documents-grid {
       display: grid;
@@ -321,11 +303,11 @@
 
     .doc-desc {
       font-size: 0.88rem;
-      line-height: 1.7;
+      line-height: 1.75;
       color: #6a7a70;
     }
 
-    /* ─── JAK TO DZIAŁA ─── */
+    /* JAK TO DZIAŁA */
     .how {
       background: var(--forest);
       color: var(--cream);
@@ -334,16 +316,13 @@
     .how .section-label { color: var(--gold); }
     .how .section-title { color: var(--cream); }
     .how .section-title em { color: var(--gold-light); }
+    .how .section-lead { color: rgba(245, 240, 232, 0.65); }
 
     .steps {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 3rem;
-      margin-top: 4rem;
-    }
-
-    .step {
-      position: relative;
+      margin-top: 1rem;
     }
 
     .step-num {
@@ -365,35 +344,28 @@
 
     .step-desc {
       font-size: 0.9rem;
-      line-height: 1.8;
-      color: rgba(245, 240, 232, 0.65);
+      line-height: 1.85;
+      color: rgba(245, 240, 232, 0.62);
     }
 
-    /* ─── CENY ─── */
-    .pricing {
-      background: var(--cream-dark);
-    }
+    /* CENY */
+    .pricing { background: var(--cream-dark); }
 
     .pricing-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2px;
-      margin-top: 4rem;
+      margin-top: 1rem;
     }
 
     .plan {
       background: var(--white);
       padding: 3rem 2.5rem;
-      position: relative;
       transition: transform 0.25s;
     }
 
     .plan:hover { transform: translateY(-4px); }
-
-    .plan.featured {
-      background: var(--forest);
-      color: var(--cream);
-    }
+    .plan.featured { background: var(--forest); color: var(--cream); }
 
     .plan-badge {
       display: inline-block;
@@ -405,11 +377,6 @@
       background: var(--gold);
       padding: 0.3rem 0.8rem;
       margin-bottom: 1.5rem;
-    }
-
-    .plan.featured .plan-badge {
-      color: var(--forest);
-      background: var(--gold);
     }
 
     .plan-name {
@@ -426,9 +393,10 @@
       font-size: 0.82rem;
       color: var(--muted);
       margin-bottom: 2rem;
+      line-height: 1.6;
     }
 
-    .plan.featured .plan-for { color: rgba(245, 240, 232, 0.55); }
+    .plan.featured .plan-for { color: rgba(245, 240, 232, 0.5); }
 
     .plan-price {
       font-family: 'Cormorant Garamond', serif;
@@ -475,9 +443,7 @@
       font-size: 0.7rem;
     }
 
-    .plan-items li.inactive {
-      opacity: 0.35;
-    }
+    .plan-items li.inactive { opacity: 0.3; }
 
     .btn-plan {
       display: block;
@@ -507,9 +473,7 @@
       color: var(--forest);
     }
 
-    .plan.featured .btn-plan:hover {
-      background: var(--gold-light);
-    }
+    .plan.featured .btn-plan:hover { background: var(--gold-light); }
 
     .pricing-note {
       text-align: center;
@@ -518,70 +482,79 @@
       color: var(--muted);
     }
 
-    /* ─── ZAPEWNIENIE ─── */
+    /* SŁOWO OD NAS */
     .assurance {
-      background: var(--cream);
-      text-align: center;
-      padding: 5rem 2rem;
+      background: var(--forest);
+      padding: 6rem 2rem;
     }
 
     .assurance-inner {
-      max-width: 600px;
+      max-width: 680px;
       margin: 0 auto;
     }
 
-    .assurance-icon {
+    .assurance-quote {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 3rem;
-      color: var(--gold);
-      margin-bottom: 1.5rem;
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--cream);
+      line-height: 1.6;
+      margin-bottom: 2rem;
     }
 
-    .assurance-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem;
-      font-weight: 400;
-      color: var(--forest);
-      margin-bottom: 1rem;
+    .assurance-quote strong {
+      font-style: normal;
+      font-weight: 500;
+      color: var(--gold-light);
     }
 
-    .assurance-text {
+    .assurance-body {
       font-size: 0.95rem;
-      line-height: 1.85;
-      color: #5a6a60;
+      line-height: 1.9;
+      color: rgba(245, 240, 232, 0.62);
     }
 
-    /* ─── FOOTER ─── */
+    .assurance-sig {
+      margin-top: 2.5rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--gold);
+      opacity: 0.7;
+    }
+
+    /* FOOTER */
     footer {
       background: var(--ink);
-      color: rgba(245, 240, 232, 0.45);
+      color: rgba(245, 240, 232, 0.4);
       text-align: center;
       padding: 3rem 2rem;
       font-size: 0.8rem;
-      line-height: 2;
+      line-height: 2.2;
     }
 
     footer a {
-      color: rgba(245, 240, 232, 0.45);
+      color: rgba(245, 240, 232, 0.4);
       text-decoration: none;
     }
 
     footer a:hover { color: var(--gold); }
 
-    footer .footer-brand {
+    .footer-brand {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.1rem;
       color: var(--cream);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
     }
 
-    /* ─── ANIMATIONS ─── */
+    /* ANIMATIONS */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* ─── RESPONSIVE ─── */
+    /* RESPONSIVE */
     @media (max-width: 640px) {
       nav { padding: 1rem 1.2rem; }
       section { padding: 4rem 1.2rem; }
@@ -596,7 +569,7 @@
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">Ostatnie<span>Słowa</span></a>
-  <a href="#pakiety" class="nav-cta">Zamów pakiet</a>
+  <a href="#pakiety" class="nav-cta">Zobacz pakiety</a>
 </nav>
 
 <!-- HERO -->
@@ -604,51 +577,51 @@
   <div class="hero-texture"></div>
   <div class="hero-ornament"></div>
   <div class="hero-content">
-    <p class="hero-eyebrow">Godne pożegnanie dla Twojego bliskiego</p>
+    <p class="hero-eyebrow">Jesteśmy tu, żeby pomóc</p>
     <h1 class="hero-title">
-      Nie szablon.<br>
-      <em>Prawdziwy tekst</em><br>
-      o Twoim bliskim.
+      Nie musisz teraz<br>
+      <em>szukać słów.</em><br>
+      Zrobimy to za Ciebie.
     </h1>
     <p class="hero-subtitle">
-      Wypełniasz 15-minutowy formularz. Otrzymujesz spersonalizowany pakiet dokumentów — nekrolog, mowę pogrzebową, tekst na klepsydrę i plan na najbliższe 30 dni. Napisane z troską. Gotowe w 24 godziny.
+      Wiemy, że w tej chwili masz głowę pełną spraw. Pożegnanie bliskiej osoby wymaga dziesiątek decyzji — i znalezienia słów, kiedy słów nie ma. Jesteśmy tu po to, żeby te słowa napisać. Spokojnie, bez pośpiechu, z szacunkiem dla Twojego bliskiego.
     </p>
     <div class="hero-actions">
-      <a href="#pakiety" class="btn-primary">Zamów pakiet</a>
+      <a href="#pakiety" class="btn-primary">Zobacz pakiety</a>
       <a href="#jak-to-dziala" class="btn-ghost">Jak to działa</a>
     </div>
-    <p class="hero-note">Płatność jednorazowa &nbsp;·&nbsp; Brak subskrypcji &nbsp;·&nbsp; PDF gotowy w 24h</p>
+    <p class="hero-note">Płatność jednorazowa &nbsp;·&nbsp; Brak subskrypcji &nbsp;·&nbsp; Gotowe w 24 godziny</p>
   </div>
 </section>
 
 <!-- CO OTRZYMUJESZ -->
 <section class="what" id="co-otrzymujesz">
   <div class="container">
-    <div class="what-intro">
-      <p class="section-label">Co znajdziesz w pakiecie</p>
-      <h2 class="section-title">Cztery dokumenty.<br><em>Jeden pakiet.</em></h2>
-      <p>Każdy tekst piszemy na podstawie Twojej historii — nie z szablonu. Imię, charakter, wspomnienia, ważne momenty. To się czuje w każdym zdaniu.</p>
-    </div>
+    <p class="section-label">Co znajdziesz w pakiecie</p>
+    <h2 class="section-title">Cztery dokumenty.<br><em>Jeden pakiet.</em></h2>
+    <p class="section-lead">
+      Każdy tekst piszemy na podstawie Twojej historii — nie z szablonu. Pytamy o to kim był Twój bliski: jak mówił, co lubił, co po sobie zostawił. To się czuje w każdym zdaniu.
+    </p>
     <div class="documents-grid">
       <div class="doc-card">
         <div class="doc-number">01</div>
         <div class="doc-name">Nekrolog</div>
-        <p class="doc-desc">Osobisty, ciepły tekst o tym kim był Twój bliski. Nie suchy formularz z datami — prawdziwa historia człowieka.</p>
+        <p class="doc-desc">Osobisty tekst o tym kim był Twój bliski. Nie suchy zapis dat — prawdziwa historia człowieka, którą warto zapamiętać.</p>
       </div>
       <div class="doc-card">
         <div class="doc-number">02</div>
         <div class="doc-name">Mowa pogrzebowa</div>
-        <p class="doc-desc">Gotowa do wygłoszenia. 5–7 minut. Napisana tak, żebyś mógł ją przeczytać nawet przez łzy.</p>
+        <p class="doc-desc">Gotowa do wygłoszenia. 5–7 minut. Napisana tak, żebyś mógł ją przeczytać nawet przez łzy — bez szukania słów w ostatniej chwili.</p>
       </div>
       <div class="doc-card">
         <div class="doc-number">03</div>
         <div class="doc-name">Tekst na klepsydrę</div>
-        <p class="doc-desc">Krótki, godny, niepowtarzalny. Bez "odszedł do wieczności" i pustych frazesów.</p>
+        <p class="doc-desc">Krótki, godny, napisany specjalnie dla tej jednej osoby. Bez pustych frazesów, które nie mówią nic o nikim.</p>
       </div>
       <div class="doc-card">
         <div class="doc-number">04</div>
-        <div class="doc-name">Plan żałoby 30 dni</div>
-        <p class="doc-desc">Formalności, wsparcie emocjonalne, plan na trudne dni. Dla Ciebie i całej rodziny.</p>
+        <div class="doc-name">Plan żałoby na 30 dni</div>
+        <p class="doc-desc">Co załatwić, kiedy i jak zadbać o siebie w tym czasie. Praktyczny przewodnik po najtrudniejszych tygodniach — dla Ciebie i całej rodziny.</p>
       </div>
     </div>
   </div>
@@ -659,21 +632,22 @@
   <div class="container">
     <p class="section-label">Proces</p>
     <h2 class="section-title">Jak to <em>działa</em></h2>
+    <p class="section-lead">Trzy kroki. Żadnej techniki, żadnego stresu.</p>
     <div class="steps">
       <div class="step">
         <div class="step-num">01</div>
-        <div class="step-title">Wypełniasz formularz</div>
-        <p class="step-desc">15 minut. Pytamy o to kim był Twój bliski — jego historię, charakter, ważne momenty. Nie daty w tabelce.</p>
+        <div class="step-title">Opowiadasz nam o bliskim</div>
+        <p class="step-desc">Wypełniasz prosty formularz — około 15 minut. Pytamy o to, kim był ten człowiek: jego historię, charakter, ważne momenty. Nie daty w tabelce.</p>
       </div>
       <div class="step">
         <div class="step-num">02</div>
-        <div class="step-title">Tworzymy Twój pakiet</div>
-        <p class="step-desc">W ciągu 24 godzin otrzymujesz gotowy PDF. Każdy tekst napisany specjalnie dla Ciebie — nie kopiujemy szablonów.</p>
+        <div class="step-title">My piszemy</div>
+        <p class="step-desc">W ciągu 24 godzin otrzymujesz gotowy PDF z kompletem dokumentów. Każdy tekst napisany specjalnie dla Ciebie — żadnych szablonów, żadnego kopiowania.</p>
       </div>
       <div class="step">
         <div class="step-num">03</div>
         <div class="step-title">Używasz od razu</div>
-        <p class="step-desc">Nekrolog do gazety, mowa na jutro, klepsydra do drukarni. Wszystko gotowe, nic do poprawiania.</p>
+        <p class="step-desc">Nekrolog do gazety, mowa na jutro, klepsydra do drukarni. Wszystko gotowe. Nic do poprawiania, jeśli nie chcesz.</p>
       </div>
     </div>
   </div>
@@ -684,11 +658,12 @@
   <div class="container">
     <p class="section-label">Pakiety</p>
     <h2 class="section-title">Wybierz <em>pakiet</em></h2>
+    <p class="section-lead">Jedna płatność. Żadnych subskrypcji. PDF w ciągu 24 godzin.</p>
     <div class="pricing-grid">
 
       <div class="plan">
         <div class="plan-name">Podstawowy</div>
-        <div class="plan-for">Podstawowe dokumenty</div>
+        <div class="plan-for">Gdy potrzebujesz najważniejszych dokumentów</div>
         <div class="plan-price"><span>zł</span>49</div>
         <ul class="plan-items">
           <li>Nekrolog osobisty</li>
@@ -700,9 +675,9 @@
       </div>
 
       <div class="plan featured">
-        <div class="plan-badge">Najpopularniejszy</div>
+        <div class="plan-badge">Najczęściej wybierany</div>
         <div class="plan-name">Pełny</div>
-        <div class="plan-for">Kompletne wsparcie</div>
+        <div class="plan-for">Kompletne wsparcie w najtrudniejszym czasie</div>
         <div class="plan-price"><span>zł</span>99</div>
         <ul class="plan-items">
           <li>Nekrolog osobisty</li>
@@ -715,7 +690,7 @@
 
       <div class="plan">
         <div class="plan-name">Z wyprzedzeniem</div>
-        <div class="plan-for">Planujesz dla swojej rodziny</div>
+        <div class="plan-for">Gdy chcesz zadbać o rodzinę zawczasu</div>
         <div class="plan-price"><span>zł</span>79</div>
         <ul class="plan-items">
           <li>Nekrolog osobisty</li>
@@ -731,14 +706,21 @@
   </div>
 </section>
 
-<!-- ZAPEWNIENIE -->
+<!-- SŁOWO OD NAS -->
 <section class="assurance">
-  <div class="assurance-inner">
-    <div class="assurance-icon">✦</div>
-    <h2 class="assurance-title">Piszemy o człowieku,<br>nie o śmierci.</h2>
-    <p class="assurance-text">
-      Wiemy, że to jeden z najtrudniejszych momentów w życiu. Dlatego nie piszemy szablonowych zdań o "odejściu". Piszemy o tym, kim był ten człowiek — co lubił, jak mówił, co po sobie zostawił. Bo na to zasługuje każdy.
-    </p>
+  <div class="container">
+    <div class="assurance-inner">
+      <p class="assurance-quote">
+        Piszemy o człowieku,<br>
+        <strong>nie o śmierci.</strong>
+      </p>
+      <p class="assurance-body">
+        Każda osoba zasługuje na pożegnanie, które naprawdę o niej mówi. Nie na zdania wyjęte z szablonu, które mogłyby dotyczyć kogokolwiek. Dlatego zanim napiszemy pierwsze słowo, słuchamy — o tym, jak wyglądał zwykły dzień tej osoby, co ją śmieszyło, czym się zajmowała, kogo kochała.
+        <br><br>
+        Rozumiemy, że nie każdy umie teraz pisać. Że słowa nie przychodzą. Że jest za dużo spraw naraz. Jesteśmy tu po to, żeby ten jeden ciężar z Ciebie zdjąć.
+      </p>
+      <p class="assurance-sig">Zespół ostatnieslowa.pl</p>
+    </div>
   </div>
 </section>
 
