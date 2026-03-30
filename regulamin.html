@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Regulamin — ostatnieslowa.pl</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --forest: #1e3528;
+      --cream: #f5f0e8;
+      --gold: #c8a96e;
+      --ink: #1a1a18;
+      --muted: #6a7a70;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.8;
+    }
+
+    nav {
+      background: var(--forest);
+      padding: 1.2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      color: var(--cream);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+    }
+
+    .nav-logo span { color: var(--gold); }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 400;
+      color: var(--forest);
+      margin-bottom: 0.5rem;
+    }
+
+    .doc-date {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--forest);
+      margin-top: 2.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #3a4a40;
+      margin-bottom: 1rem;
+    }
+
+    ol, ul {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      font-size: 0.95rem;
+      color: #3a4a40;
+      margin-bottom: 0.4rem;
+    }
+
+    a { color: var(--forest); }
+
+    footer {
+      background: var(--ink);
+      color: rgba(245,240,232,0.4);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+    }
+
+    footer a { color: rgba(245,240,232,0.4); text-decoration: none; }
+    footer a:hover { color: var(--gold); }
+    .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      color: var(--cream);
+      margin-bottom: 0.4rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Ostatnie<span>Słowa</span></a>
+</nav>
+
+<div class="container">
+  <h1>Regulamin świadczenia usług</h1>
+  <p class="doc-date">Obowiązuje od: 1 kwietnia 2026 r.</p>
+
+  <h2>§1. Postanowienia ogólne</h2>
+  <p>Niniejszy regulamin określa zasady świadczenia usług drogą elektroniczną przez serwis ostatnieslowa.pl, prowadzony przez osobę fizyczną z siedzibą w Polsce (zwaną dalej „Usługodawcą").</p>
+  <p>Korzystanie z usług serwisu oznacza akceptację niniejszego regulaminu.</p>
+
+  <h2>§2. Zakres usług</h2>
+  <p>Serwis ostatnieslowa.pl świadczy usługę polegającą na przygotowaniu spersonalizowanych dokumentów pogrzebowych na podstawie informacji przekazanych przez Klienta, w tym:</p>
+  <ul>
+    <li>nekrologu</li>
+    <li>mowy pogrzebowej</li>
+    <li>tekstu na klepsydrę</li>
+    <li>planu wsparcia na 30 dni po stracie bliskiej osoby</li>
+  </ul>
+  <p>Dokumenty dostarczane są w formie pliku PDF na adres e-mail podany przez Klienta.</p>
+
+  <h2>§3. Składanie zamówień</h2>
+  <p>Zamówienie składane jest poprzez:</p>
+  <ol>
+    <li>Wybór pakietu i dokonanie płatności za pośrednictwem serwisu Stripe.</li>
+    <li>Wypełnienie formularza z informacjami o osobie zmarłej.</li>
+  </ol>
+  <p>Zamówienie uważa się za złożone z chwilą zaksięgowania płatności i wypełnienia formularza.</p>
+
+  <h2>§4. Ceny i płatności</h2>
+  <p>Ceny usług podane są w polskich złotych (PLN) i są cenami brutto. Aktualne ceny dostępne są na stronie głównej serwisu.</p>
+  <p>Płatności obsługiwane są przez serwis Stripe. Usługodawca nie przechowuje danych kart płatniczych.</p>
+
+  <h2>§5. Realizacja zamówienia</h2>
+  <p>Dokumenty dostarczane są na adres e-mail Klienta w ciągu 24 godzin od złożenia zamówienia i wypełnienia formularza.</p>
+  <p>W przypadku niemożności realizacji zamówienia w tym terminie, Usługodawca niezwłocznie poinformuje Klienta drogą e-mailową.</p>
+
+  <h2>§6. Prawo do odstąpienia od umowy</h2>
+  <p>Zgodnie z art. 38 pkt 13 ustawy z dnia 30 maja 2014 r. o prawach konsumenta, prawo odstąpienia od umowy zawartej na odległość nie przysługuje w odniesieniu do umów o dostarczanie treści cyfrowych niedostarczanych na nośniku materialnym, jeżeli spełnianie świadczenia rozpoczęło się za wyraźną zgodą konsumenta przed upływem terminu do odstąpienia od umowy.</p>
+  <p>Klient wyraża zgodę na natychmiastowe rozpoczęcie realizacji zamówienia z chwilą złożenia zamówienia, co oznacza utratę prawa do odstąpienia od umowy po rozpoczęciu realizacji.</p>
+  <p>W przypadku niezadowolenia z jakości otrzymanych dokumentów, Klient może zgłosić reklamację na adres: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="395256574d58524d79564a4d584d57505c4a55564e58174955">[email&#160;protected]</a>. Usługodawca rozpatrzy reklamację w ciągu 14 dni roboczych.</p>
+
+  <h2>§7. Reklamacje</h2>
+  <p>Reklamacje należy zgłaszać na adres e-mail: <a href="/cdn-cgi/l/email-protection#cba0a4a5bfaaa0bf8ba4b8bfaabfa5a2aeb8a7a4bcaae5bba7"><span class="__cf_email__" data-cfemail="3e5551504a5f554a7e514d4a5f4a50575b4d5251495f104e52">[email&#160;protected]</span></a>.</p>
+  <p>Reklamacja powinna zawierać: imię i nazwisko Klienta, adres e-mail, numer zamówienia oraz opis zastrzeżeń.</p>
+  <p>Usługodawca rozpatruje reklamacje w terminie 14 dni roboczych od ich otrzymania.</p>
+
+  <h2>§8. Własność intelektualna</h2>
+  <p>Dokumenty wytworzone w ramach usługi są przekazywane Klientowi do użytku osobistego. Klient może je wykorzystać w całości lub fragmentach w związku z organizacją uroczystości pogrzebowej.</p>
+
+  <h2>§9. Postanowienia końcowe</h2>
+  <p>W sprawach nieuregulowanych niniejszym regulaminem stosuje się przepisy prawa polskiego, w szczególności Kodeksu cywilnego oraz ustawy o świadczeniu usług drogą elektroniczną.</p>
+  <p>Usługodawca zastrzega sobie prawo do zmiany regulaminu. O zmianach Klienci zostaną poinformowani z co najmniej 14-dniowym wyprzedzeniem.</p>
+  <p>Wszelkie pytania dotyczące regulaminu prosimy kierować na adres: <a href="/cdn-cgi/l/email-protection#e58e8a8b91848e91a58a969184918b8c8096898a9284cb9589"><span class="__cf_email__" data-cfemail="fb9094958f9a908fbb94888f9a8f95929e8897948c9ad58
