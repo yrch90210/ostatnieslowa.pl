@@ -644,13 +644,30 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 2px;
-      margin-top: 1rem;
     }
 
     .grief-block {
       background: var(--white);
       padding: 2.5rem 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s;
     }
+
+    .grief-block::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px;
+      height: 100%;
+      background: var(--gold);
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform 0.3s ease;
+    }
+
+    .grief-block:hover::before { transform: scaleY(1); }
+    .grief-block:hover { transform: translateY(-3px); }
 
     .grief-phase {
       font-size: 0.68rem;
@@ -658,12 +675,12 @@
       letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--gold);
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.6rem;
     }
 
     .grief-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       font-weight: 500;
       color: var(--forest);
       margin-bottom: 1rem;
@@ -677,7 +694,7 @@
     .grief-items li {
       font-size: 0.88rem;
       line-height: 1.7;
-      color: #4a5a50;
+      color: #6a7a70;
       padding: 0.4rem 0;
       border-bottom: 1px solid rgba(0,0,0,0.05);
       display: flex;
