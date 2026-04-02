@@ -484,6 +484,253 @@
       color: var(--muted);
     }
 
+    /* PRZYKŁADY */
+    .examples { background: var(--white); }
+
+    .examples-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+    }
+
+    .example-card {
+      background: var(--cream);
+      padding: 2.5rem 2rem;
+    }
+
+    .example-card--wide {
+      grid-column: 1 / -1;
+    }
+
+    .example-label {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+
+    .example-body p {
+      font-size: 0.92rem;
+      line-height: 1.85;
+      color: #4a5a50;
+      margin-bottom: 0.8rem;
+    }
+
+    .example-body p:last-child { margin-bottom: 0; }
+
+    .example-klepsydra {
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .klepsydra-name {
+      font-family: 'Cormorant Garamond', serif !important;
+      font-size: 1.6rem !important;
+      font-weight: 500 !important;
+      color: var(--forest) !important;
+      margin-bottom: 0.3rem !important;
+    }
+
+    .klepsydra-dates {
+      font-size: 0.82rem !important;
+      color: var(--muted) !important;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.2rem !important;
+    }
+
+    .klepsydra-text {
+      font-family: 'Cormorant Garamond', serif !important;
+      font-size: 1rem !important;
+      font-style: italic;
+      line-height: 1.9 !important;
+      color: #4a5a50 !important;
+      margin-bottom: 1.2rem !important;
+    }
+
+    .klepsydra-family {
+      font-size: 0.82rem !important;
+      color: var(--muted) !important;
+    }
+
+    @media (max-width: 640px) {
+      .examples-grid { grid-template-columns: 1fr; }
+      .example-card--wide { grid-column: 1; }
+    }
+
+    /* PLAN ŻAŁOBY */
+    .grief-plan { background: var(--cream-dark); }
+
+    .grief-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2px;
+      margin-top: 1rem;
+    }
+
+    .grief-block {
+      background: var(--white);
+      padding: 2.5rem 2rem;
+    }
+
+    .grief-phase {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+    }
+
+    .grief-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--forest);
+      margin-bottom: 1rem;
+    }
+
+    .grief-items {
+      list-style: none;
+      padding: 0;
+    }
+
+    .grief-items li {
+      font-size: 0.88rem;
+      line-height: 1.7;
+      color: #4a5a50;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      display: flex;
+      gap: 0.6rem;
+    }
+
+    .grief-items li::before {
+      content: '—';
+      color: var(--gold);
+      flex-shrink: 0;
+      font-size: 0.7rem;
+      margin-top: 0.2rem;
+    }
+
+    .grief-items li:last-child { border-bottom: none; }
+
+    /* MOCKUP KLEPSYDRY */
+    .klepsydra-mockup { background: var(--forest); padding: 6rem 2rem; }
+    .klepsydra-mockup .section-label { color: var(--gold); }
+    .klepsydra-mockup .section-title { color: var(--cream); }
+    .klepsydra-mockup .section-title em { color: var(--gold-light); }
+    .klepsydra-mockup .section-lead { color: rgba(245,240,232,0.6); }
+
+    .mockup-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 3rem;
+    }
+
+    .mockup-card {
+      background: var(--white);
+      width: 360px;
+      padding: 2.5rem 2.5rem;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 40px 80px rgba(0,0,0,0.4);
+    }
+
+    /* Ozdobne narożniki */
+    .mockup-card::before {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border: 1px solid #222;
+      pointer-events: none;
+    }
+
+    .mockup-corner {
+      position: absolute;
+      width: 36px;
+      height: 36px;
+      opacity: 0.7;
+    }
+    .mockup-corner--tl { top: 4px; left: 4px; }
+    .mockup-corner--tr { top: 4px; right: 4px; transform: scaleX(-1); }
+    .mockup-corner--bl { bottom: 4px; left: 4px; transform: scaleY(-1); }
+    .mockup-corner--br { bottom: 4px; right: 4px; transform: scale(-1); }
+
+    .mockup-ribbon {
+      font-size: 2rem;
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+
+    .mockup-intro {
+      font-size: 0.78rem;
+      color: #333;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .mockup-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      color: #111;
+      margin-bottom: 0.2rem;
+      line-height: 1.2;
+    }
+
+    .mockup-subtitle {
+      font-size: 0.75rem;
+      color: #555;
+      font-style: italic;
+      margin-bottom: 0.2rem;
+    }
+
+    .mockup-dates {
+      font-size: 0.82rem;
+      color: #333;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.2rem;
+    }
+
+    .mockup-divider {
+      width: 60%;
+      height: 1px;
+      background: #333;
+      margin: 0 auto 1.2rem;
+      opacity: 0.3;
+    }
+
+    .mockup-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.95rem;
+      font-style: italic;
+      line-height: 1.9;
+      color: #333;
+      margin-bottom: 1.2rem;
+    }
+
+    .mockup-ceremony {
+      font-size: 0.78rem;
+      color: #333;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .mockup-family {
+      font-size: 0.78rem;
+      font-style: italic;
+      color: #555;
+    }
+
+    .mockup-note {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.78rem;
+      color: rgba(245,240,232,0.4);
+    }
+
     /* SŁOWO OD NAS */
     .assurance {
       background: var(--forest);
@@ -705,6 +952,117 @@
 
     </div>
     <p class="pricing-note">Wszystko w jednym PDF &nbsp;·&nbsp; Płatność jednorazowa &nbsp;·&nbsp; Brak subskrypcji</p>
+  </div>
+</section>
+
+<!-- PRZYKŁADY -->
+<section class="examples" id="przyklad">
+  <div class="container">
+    <p class="section-label">Przykład</p>
+    <h2 class="section-title">Jak to <em>wygląda</em></h2>
+    <p class="section-lead">Fragment przykładowego pakietu. Dane są fikcyjne — pokazujemy styl i ton, nie szablon.</p>
+
+    <div class="examples-grid">
+
+      <div class="example-card">
+        <div class="example-label">Nekrolog</div>
+        <div class="example-body">
+          <p>Odeszła kobieta, która wiedziała, że miłość wymaga obecności — nie od święta, lecz każdego dnia. Przez całe życie wychowała trójkę dzieci i tysiące uczniów. Każde dziecko, które trafiło do jej klasy, zabierało do domu coś więcej niż wiedzę. Zabierało pewność, że ktoś w nie wierzy.</p>
+          <p>Jej róże kwitły do ostatniego lata. Jakby wiedziały, że ona jeszcze patrzy.</p>
+          <p>Była filarem — tym stałym, niezachwianym. Tym, którego brakowało, zanim zdążyłeś zauważyć, że jesteś o niego wsparty.</p>
+          <p>Zostało spojrzenie, które mówiło: wszystko będzie dobrze. Zostają ręce, które to spojrzenie wypełniały treścią.</p>
+          <p style="margin-top:1rem; font-size:0.82rem; color: var(--muted);">Żegnamy Cię, Janino. — Rodzina</p>
+        </div>
+      </div>
+
+      <div class="example-card">
+        <div class="example-label">Tekst na klepsydrę</div>
+        <div class="example-body example-klepsydra">
+          <p class="klepsydra-name">Janina Kowalska</p>
+          <p class="klepsydra-dates" style="font-style:italic; margin-bottom:0.5rem !important;">kochająca matka, nauczycielka</p>
+          <p class="klepsydra-dates">1948 — 2024</p>
+          <p class="klepsydra-text">Bóg dał nam Cię na chwilę —<br>a Ty z tej chwili uczyniłaś całe nasze życie.<br>Pustka, którą po sobie zostawiasz, jest większa<br>niż wszystko, co zdołamy w nią włożyć —<br>bo niektórych ludzi nie zastępuje się nikim,<br>ich miejsce pozostaje święte.<br>Wierzymy, że tam, gdzie teraz jesteś,<br>Twoja miłość nie zamilkła, lecz tymczasowo zmieniła adres.</p>
+          <p class="klepsydra-family">Msza święta pogrzebowa odprawiona zostanie<br>w piątek, o godzinie jedenastej.</p>
+        </div>
+      </div>
+
+      <div class="example-card example-card--wide">
+        <div class="example-label">Fragment mowy pogrzebowej (od syna)</div>
+        <div class="example-body">
+          <p>Nie wiedziałem, jak zacząć. Przez całą noc szukałem właściwych słów — i nie zdołałem ich znaleźć. Bo jak zamknąć w słowach kogoś, kto był dla mnie całym światem?</p>
+          <p>Mama uczyła. Ale nie tak, jak się zwykło mówić o nauczycielach — że przekazywali wiedzę, że byli cierpliwi, że poświęcali się dzieciom. Nie. Ona robiła coś trudniejszego: wchodziła do klasy i sprawiała, że każde dziecko czuło się tym Jedynym dzieckiem w pokoju. Przez czterdzieści lat. Bez jednego dnia, w którym by na to nie zasługiwało.</p>
+          <p>Klękała przy różach bez pośpiechu, gdy inni pędzili przez życie jak przez cudzy korytarz. Mówiła: nie możesz przyspieszyć kwitnienia. I teraz rozumiem, że to nie była mądrość ogrodnika. To była mądrość człowieka, który wiedział, że miłość wymaga czasu, że człowiek wyrasta powoli, że wszystko, co trwałe, musi najpierw zakorzenić się w ciemności.</p>
+          <p>Była filarem z rzadkiego minerału, takim, przy którym zatrzymuje się, gdy coś kwili, i ma się poczucie, że ten świat jednak trzyma. Sama walczyła w ciszy, żebyśmy mogli żyć głośno. Sama się bała, żebyśmy mogli czuć się bezpiecznie. To jest miłość, której nie definiuje żaden słownik.</p>
+          <p>Odeszłaś, Mamo — ale nie zniknęłaś. Zostałaś w tym, jak patrzymy na swoje dzieci. W tym, że umiemy jeszcze klęczeć przy ziemi i wierzyć, że coś zakwitnie. Dziękujemy, że byłaś. Dziękujemy, że nauczyłaś nas, jak być.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PLAN ŻAŁOBY -->
+<section class="grief-plan" id="plan-zaloby">
+  <div class="container">
+    <p class="section-label">Pakiet Pełny</p>
+    <h2 class="section-title">Co zawiera <em>plan żałoby</em></h2>
+    <p class="section-lead">30 dni konkretnego wsparcia — podzielone na etapy, dopasowane do Twojej sytuacji. Nie ogólne porady, ale praktyczny przewodnik po najtrudniejszych tygodniach.</p>
+    <div class="grief-grid">
+
+      <div class="grief-block">
+        <div class="grief-phase">Pierwsze 48 godzin</div>
+        <div class="grief-title">Gdy wszystko się zatrzymuje</div>
+        <ul class="grief-items">
+          <li>Lista formalności do załatwienia w pierwszej kolejności</li>
+          <li>Jak poinformować bliskich i znajomych</li>
+          <li>Jak zadbać o siebie gdy nie masz siły na nic</li>
+        </ul>
+      </div>
+
+      <div class="grief-block">
+        <div class="grief-phase">Tydzień pierwszy</div>
+        <div class="grief-title">Organizacja i obecność</div>
+        <ul class="grief-items">
+          <li>Dokumenty i urzędy — co, gdzie i w jakiej kolejności</li>
+          <li>Jak rozmawiać z dziećmi o stracie</li>
+          <li>Kiedy i jak przyjmować pomoc od innych</li>
+        </ul>
+      </div>
+
+      <div class="grief-block">
+        <div class="grief-phase">Tydzień drugi i trzeci</div>
+        <div class="grief-title">Gdy codzienność wraca</div>
+        <ul class="grief-items">
+          <li>Jak przeżywać trudne dni bez poczucia winy</li>
+          <li>Sprawy finansowe i prawne po stracie bliskiego</li>
+          <li>Sygnały że warto poszukać dodatkowego wsparcia</li>
+        </ul>
+      </div>
+
+      <div class="grief-block">
+        <div class="grief-phase">Tydzień czwarty</div>
+        <div class="grief-title">Pierwsze kroki dalej</div>
+        <ul class="grief-items">
+          <li>Jak stworzyć własny rytuał pamięci</li>
+          <li>Kiedy żałoba jest "normalna" — a kiedy nie</li>
+          <li>Plan na rocznice i trudne daty w kalendarzu</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MOCKUP KLEPSYDRY -->
+<section class="klepsydra-mockup">
+  <div class="container">
+    <p class="section-label">Gotowe do druku</p>
+    <h2 class="section-title">Tak wygląda <em>klepsydra</em></h2>
+    <p class="section-lead">Otrzymujesz gotowy plik PDF — z elegancką ramką, ozdobnikami i tekstem napisanym specjalnie dla Twojego bliskiego. Idziesz prosto do drukarni.</p>
+    <div class="mockup-wrapper">
+      <img src="klepsydra.png" alt="Przykład klepsydry" style="max-width: 380px; width: 100%; box-shadow: 0 40px 80px rgba(0,0,0,0.4);" />
+    </div>
+    <p class="mockup-note">Przykład poglądowy — Twoja klepsydra będzie zawierać dane i tekst Twojego bliskiego.</p>
   </div>
 </section>
 
