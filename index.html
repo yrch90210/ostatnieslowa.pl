@@ -484,79 +484,157 @@
       color: var(--muted);
     }
 
-    /* PRZYKŁADY */
+    /* PRZYKŁADY — AKORDEON */
     .examples { background: var(--white); }
 
-    .examples-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2px;
+    .accordion {
+      max-width: 760px;
+      margin: 0 auto;
     }
 
-    .example-card {
-      background: var(--cream);
-      padding: 2.5rem 2rem;
+    .accordion-item {
+      border-bottom: 1px solid rgba(0,0,0,0.08);
     }
 
-    .example-card--wide {
-      grid-column: 1 / -1;
+    .accordion-item:first-child {
+      border-top: 1px solid rgba(0,0,0,0.08);
     }
 
-    .example-label {
-      font-size: 0.68rem;
-      font-weight: 500;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
+    .accordion-trigger {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.8rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      text-align: left;
+      gap: 1rem;
+    }
+
+    .accordion-trigger:hover .accordion-title { color: var(--forest-light); }
+
+    .accordion-meta {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    .accordion-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--cream-dark);
+      line-height: 1;
+      flex-shrink: 0;
+      width: 2.5rem;
+    }
+
+    .accordion-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--forest);
+      transition: color 0.2s;
+    }
+
+    .accordion-desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 0.2rem;
+    }
+
+    .accordion-icon {
+      font-size: 1.2rem;
       color: var(--gold);
-      margin-bottom: 1.2rem;
+      flex-shrink: 0;
+      transition: transform 0.35s ease;
+      line-height: 1;
     }
 
-    .example-body p {
-      font-size: 0.92rem;
-      line-height: 1.85;
+    .accordion-item.open .accordion-icon {
+      transform: rotate(45deg);
+    }
+
+    .accordion-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.45s ease, padding 0.35s ease;
+    }
+
+    .accordion-item.open .accordion-body {
+      max-height: 1200px;
+    }
+
+    .accordion-content {
+      padding-bottom: 2.5rem;
+    }
+
+    .accordion-content p {
+      font-size: 0.95rem;
+      line-height: 1.9;
       color: #4a5a50;
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.9rem;
     }
 
-    .example-body p:last-child { margin-bottom: 0; }
+    .accordion-content p:last-child { margin-bottom: 0; }
 
-    .example-klepsydra {
+    /* Klepsydra w akordeonie */
+    .accordion-klepsydra {
       text-align: center;
-      padding: 1rem 0;
+      padding: 2rem;
+      background: var(--cream);
+      max-width: 480px;
+      margin: 0 auto;
     }
 
     .klepsydra-name {
-      font-family: 'Cormorant Garamond', serif !important;
-      font-size: 1.6rem !important;
-      font-weight: 500 !important;
-      color: var(--forest) !important;
-      margin-bottom: 0.3rem !important;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: var(--forest);
+      margin-bottom: 0.2rem;
     }
 
     .klepsydra-dates {
-      font-size: 0.82rem !important;
-      color: var(--muted) !important;
+      font-size: 0.8rem;
+      color: var(--muted);
       letter-spacing: 0.08em;
-      margin-bottom: 1.2rem !important;
+      margin-bottom: 0.2rem;
+    }
+
+    .klepsydra-subtitle {
+      font-size: 0.82rem;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .klepsydra-divider {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto 1.2rem;
+      opacity: 0.5;
     }
 
     .klepsydra-text {
-      font-family: 'Cormorant Garamond', serif !important;
-      font-size: 1rem !important;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
       font-style: italic;
-      line-height: 1.9 !important;
-      color: #4a5a50 !important;
-      margin-bottom: 1.2rem !important;
+      line-height: 2;
+      color: #3a4a40;
+      margin-bottom: 1.2rem;
     }
 
     .klepsydra-family {
-      font-size: 0.82rem !important;
-      color: var(--muted) !important;
+      font-size: 0.78rem;
+      color: var(--muted);
     }
 
     @media (max-width: 640px) {
-      .examples-grid { grid-template-columns: 1fr; }
-      .example-card--wide { grid-column: 1; }
+      .accordion-title { font-size: 1.3rem; }
     }
 
     /* PLAN ŻAŁOBY */
@@ -962,44 +1040,102 @@
     <h2 class="section-title">Jak to <em>wygląda</em></h2>
     <p class="section-lead">Fragment przykładowego pakietu. Dane są fikcyjne — pokazujemy styl i ton, nie szablon.</p>
 
-    <div class="examples-grid">
+    <div class="accordion">
 
-      <div class="example-card">
-        <div class="example-label">Nekrolog</div>
-        <div class="example-body">
-          <p>Odeszła kobieta, która wiedziała, że miłość wymaga obecności — nie od święta, lecz każdego dnia. Przez całe życie wychowała trójkę dzieci i tysiące uczniów. Każde dziecko, które trafiło do jej klasy, zabierało do domu coś więcej niż wiedzę. Zabierało pewność, że ktoś w nie wierzy.</p>
-          <p>Jej róże kwitły do ostatniego lata. Jakby wiedziały, że ona jeszcze patrzy.</p>
-          <p>Była filarem — tym stałym, niezachwianym. Tym, którego brakowało, zanim zdążyłeś zauważyć, że jesteś o niego wsparty.</p>
-          <p>Zostało spojrzenie, które mówiło: wszystko będzie dobrze. Zostają ręce, które to spojrzenie wypełniały treścią.</p>
-          <p style="margin-top:1rem; font-size:0.82rem; color: var(--muted);">Żegnamy Cię, Janino. — Rodzina</p>
+      <!-- NEKROLOG -->
+      <div class="accordion-item open">
+        <button class="accordion-trigger" onclick="toggleAccordion(this)">
+          <div class="accordion-meta">
+            <span class="accordion-num">01</span>
+            <div>
+              <div class="accordion-title">Nekrolog</div>
+              <div class="accordion-desc">Osobisty tekst o tym kim był Twój bliski</div>
+            </div>
+          </div>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            <p>Odeszła kobieta, która wiedziała, że miłość wymaga obecności — nie od święta, lecz każdego dnia. Przez całe życie wychowała trójkę dzieci i tysiące uczniów. Każde dziecko, które trafiło do jej klasy, zabierało do domu coś więcej niż wiedzę. Zabierało pewność, że ktoś w nie wierzy.</p>
+            <p>Jej róże kwitły do ostatniego lata. Jakby wiedziały, że ona jeszcze patrzy.</p>
+            <p>Była filarem — tym stałym, niezachwianym. Tym, którego brakowało, zanim zdążyłeś zauważyć, że jesteś o niego wsparty.</p>
+            <p>Zostało spojrzenie, które mówiło: wszystko będzie dobrze. Zostają ręce, które to spojrzenie wypełniały treścią.</p>
+            <p style="margin-top:1rem; font-size:0.82rem; color: var(--muted); font-style:italic;">Żegnamy Cię, Janino. — Rodzina</p>
+          </div>
         </div>
       </div>
 
-      <div class="example-card">
-        <div class="example-label">Tekst na klepsydrę</div>
-        <div class="example-body example-klepsydra">
-          <p class="klepsydra-name">Janina Kowalska</p>
-          <p class="klepsydra-dates" style="font-style:italic; margin-bottom:0.5rem !important;">kochająca matka, nauczycielka</p>
-          <p class="klepsydra-dates">1948 — 2024</p>
-          <p class="klepsydra-text">Bóg dał nam Cię na chwilę —<br>a Ty z tej chwili uczyniłaś całe nasze życie.<br>Pustka, którą po sobie zostawiasz, jest większa<br>niż wszystko, co zdołamy w nią włożyć —<br>bo niektórych ludzi nie zastępuje się nikim,<br>ich miejsce pozostaje święte.<br>Wierzymy, że tam, gdzie teraz jesteś,<br>Twoja miłość nie zamilkła, lecz tymczasowo zmieniła adres.</p>
-          <p class="klepsydra-family">Msza święta pogrzebowa odprawiona zostanie<br>w piątek, o godzinie jedenastej.</p>
+      <!-- KLEPSYDRA -->
+      <div class="accordion-item">
+        <button class="accordion-trigger" onclick="toggleAccordion(this)">
+          <div class="accordion-meta">
+            <span class="accordion-num">02</span>
+            <div>
+              <div class="accordion-title">Tekst na klepsydrę</div>
+              <div class="accordion-desc">Godny, niepowtarzalny, gotowy do drukarni</div>
+            </div>
+          </div>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            <div class="accordion-klepsydra">
+              <div class="klepsydra-name">Janina Kowalska</div>
+              <div class="klepsydra-subtitle">kochająca matka, nauczycielka</div>
+              <div class="klepsydra-dates">1948 — 2024</div>
+              <div class="klepsydra-divider"></div>
+              <div class="klepsydra-text">
+                Bóg dał nam Cię na chwilę —<br>
+                a Ty z tej chwili uczyniłaś całe nasze życie.<br>
+                Pustka, którą po sobie zostawiasz, jest większa<br>
+                niż wszystko, co zdołamy w nią włożyć —<br>
+                bo niektórych ludzi nie zastępuje się nikim,<br>
+                ich miejsce pozostaje święte.<br>
+                Wierzymy, że tam, gdzie teraz jesteś,<br>
+                Twoja miłość nie zamilkła,<br>
+                lecz tymczasowo zmieniła adres.
+              </div>
+              <div class="klepsydra-family">Msza święta pogrzebowa odprawiona zostanie<br>w piątek, o godzinie jedenastej.</div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="example-card example-card--wide">
-        <div class="example-label">Fragment mowy pogrzebowej (od syna)</div>
-        <div class="example-body">
-          <p>Nie wiedziałem, jak zacząć. Przez całą noc szukałem właściwych słów — i nie zdołałem ich znaleźć. Bo jak zamknąć w słowach kogoś, kto był dla mnie całym światem?</p>
-          <p>Mama uczyła. Ale nie tak, jak się zwykło mówić o nauczycielach — że przekazywali wiedzę, że byli cierpliwi, że poświęcali się dzieciom. Nie. Ona robiła coś trudniejszego: wchodziła do klasy i sprawiała, że każde dziecko czuło się tym Jedynym dzieckiem w pokoju. Przez czterdzieści lat. Bez jednego dnia, w którym by na to nie zasługiwało.</p>
-          <p>Klękała przy różach bez pośpiechu, gdy inni pędzili przez życie jak przez cudzy korytarz. Mówiła: nie możesz przyspieszyć kwitnienia. I teraz rozumiem, że to nie była mądrość ogrodnika. To była mądrość człowieka, który wiedział, że miłość wymaga czasu, że człowiek wyrasta powoli, że wszystko, co trwałe, musi najpierw zakorzenić się w ciemności.</p>
-          <p>Była filarem z rzadkiego minerału, takim, przy którym zatrzymuje się, gdy coś kwili, i ma się poczucie, że ten świat jednak trzyma. Sama walczyła w ciszy, żebyśmy mogli żyć głośno. Sama się bała, żebyśmy mogli czuć się bezpiecznie. To jest miłość, której nie definiuje żaden słownik.</p>
-          <p>Odeszłaś, Mamo — ale nie zniknęłaś. Zostałaś w tym, jak patrzymy na swoje dzieci. W tym, że umiemy jeszcze klęczeć przy ziemi i wierzyć, że coś zakwitnie. Dziękujemy, że byłaś. Dziękujemy, że nauczyłaś nas, jak być.</p>
+      <!-- MOWA -->
+      <div class="accordion-item">
+        <button class="accordion-trigger" onclick="toggleAccordion(this)">
+          <div class="accordion-meta">
+            <span class="accordion-num">03</span>
+            <div>
+              <div class="accordion-title">Mowa pogrzebowa</div>
+              <div class="accordion-desc">Gotowa do wygłoszenia — fragment</div>
+            </div>
+          </div>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            <p>Nie wiedziałem, jak zacząć. Przez całą noc szukałem właściwych słów — i nie zdołałem ich znaleźć. Bo jak zamknąć w słowach kogoś, kto był dla mnie całym światem?</p>
+            <p>Mama uczyła. Ale nie tak, jak się zwykło mówić o nauczycielach — że przekazywali wiedzę, że byli cierpliwi, że poświęcali się dzieciom. Nie. Ona robiła coś trudniejszego: wchodziła do klasy i sprawiała, że każde dziecko czuło się tym Jedynym dzieckiem w pokoju. Przez czterdzieści lat. Bez jednego dnia, w którym by na to nie zasługiwało.</p>
+            <p>Klękała przy różach bez pośpiechu, gdy inni pędzili przez życie jak przez cudzy korytarz. Mówiła: nie możesz przyspieszyć kwitnienia. I teraz rozumiem, że to nie była mądrość ogrodnika. To była mądrość człowieka, który wiedział, że miłość wymaga czasu, że człowiek wyrasta powoli, że wszystko, co trwałe, musi najpierw zakorzenić się w ciemności.</p>
+            <p>Była filarem z rzadkiego minerału, takim, przy którym zatrzymuje się, gdy coś kwili, i ma się poczucie, że ten świat jednak trzyma. Sama walczyła w ciszy, żebyśmy mogli żyć głośno. Sama się bała, żebyśmy mogli czuć się bezpiecznie. To jest miłość, której nie definiuje żaden słownik.</p>
+            <p>Odeszłaś, Mamo — ale nie zniknęłaś. Zostałaś w tym, jak patrzymy na swoje dzieci. W tym, że umiemy jeszcze klęczeć przy ziemi i wierzyć, że coś zakwitnie. Dziękujemy, że byłaś. Dziękujemy, że nauczyłaś nas, jak być.</p>
+          </div>
         </div>
       </div>
 
     </div>
   </div>
 </section>
+
+<script>
+function toggleAccordion(trigger) {
+  const item = trigger.closest('.accordion-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.accordion-item.open').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+</script>
 
 <!-- PLAN ŻAŁOBY -->
 <section class="grief-plan" id="plan-zaloby">
